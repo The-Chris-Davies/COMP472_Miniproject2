@@ -27,5 +27,6 @@ This runs a single game with the specified parameters, and saves a game trace. M
 ## Requirements:
 - NumPy
 - SciPy
+
 Or, alternatively, to run convolutions on the GPU,
 - CuPy
