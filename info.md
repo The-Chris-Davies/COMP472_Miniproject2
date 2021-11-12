@@ -23,7 +23,9 @@ I created the Agent class to allow more flexibility in the AI that plays against
 ## Heuristic Functions:
 ### heuristic_1:
 `heuristic_1` calculates the number of potential wins for each player, and weights them based on how many pieces each condition requires to win. The equations used to do so is as follows:
+
 ![heuristic 1 equation](/docs/imgs/h1_eq.png)
+
 where `count(k,p)` is the number of possible s-in-a-rows that have `k` pieces in them for player `p`.
 
 Note that the weight for each of these counts (2^k) is not optimal - I know that, for example, two (s-1)-in-a-rows is equivalent to one s-in-a-row, but I didn't do a full combinatorial game theory analysis of the move combinations as I would have liked. 
