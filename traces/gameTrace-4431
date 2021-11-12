@@ -1,0 +1,139 @@
+n=4 b=4 s=3 t=1
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+Player 1: AI d=6 alphabeta heuristic_1
+Player 2: AI d=6 alphabeta heuristic_2
+move #0
+ |ABCD
+-+----
+0|*..*
+1|....
+2|....
+3|*..*
+
+
+Player X plays: A 1
+i	Evaluation time: 0.0591526s
+ii	Heuristic evaluations: 271
+iii	Evaluations by depth: {6: 271}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #1
+ |ABCD
+-+----
+0|*..*
+1|X...
+2|....
+3|*..*
+
+
+Player O plays: B 2
+i	Evaluation time: 0.0864959s
+ii	Heuristic evaluations: 501
+iii	Evaluations by depth: {6: 501}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.982314814814814
+move #2
+ |ABCD
+-+----
+0|*..*
+1|X...
+2|.O..
+3|*..*
+
+
+Player X plays: B 0
+i	Evaluation time: 0.1262488s
+ii	Heuristic evaluations: 551
+iii	Evaluations by depth: {6: 551}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.677291666666667
+move #3
+ |ABCD
+-+----
+0|*X.*
+1|X...
+2|.O..
+3|*..*
+
+
+Player O plays: A 2
+i	Evaluation time: 0.0115178s
+ii	Heuristic evaluations: 21
+iii	Evaluations by depth: {6: 21}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.796875
+move #4
+ |ABCD
+-+----
+0|*X.*
+1|X...
+2|OO..
+3|*..*
+
+
+Player X plays: B 1
+i	Evaluation time: 0.0208087s
+ii	Heuristic evaluations: 66
+iii	Evaluations by depth: {6: 66}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 4.960069444444444
+move #5
+ |ABCD
+-+----
+0|*X.*
+1|XX..
+2|OO..
+3|*..*
+
+
+Player O plays: C 1
+i	Evaluation time: 0.008971s
+ii	Heuristic evaluations: 35
+iii	Evaluations by depth: {6: 35}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 4.777777777777778
+move #6
+ |ABCD
+-+----
+0|*X.*
+1|XXO.
+2|OO..
+3|*..*
+
+
+Player X plays: B 3
+i	Evaluation time: 0.009711s
+ii	Heuristic evaluations: 30
+iii	Evaluations by depth: {6: 30}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.625
+move #7
+ |ABCD
+-+----
+0|*X.*
+1|XXO.
+2|OO..
+3|*X.*
+
+
+Player O plays: C 2
+i	Evaluation time: 0.0008347s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 3.8333333333333335
+move #8
+ |ABCD
+-+----
+0|*X.*
+1|XXO.
+2|OOO.
+3|*X.*
+
+
+The winner is X!
+i	Average Evaluation time: 0.04046756029129028s
+ii	Total Heuristic evaluations: 1475
+iii	Evaluations by depth: {6: 1475}
+iv	Average evaluation depth: 5.25
+v	Average recursion depth: 0.4791666666666667

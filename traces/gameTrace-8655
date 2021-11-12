@@ -1,0 +1,1125 @@
+n=8 b=6 s=5 t=5
+blocs=[(3, 2), (3, 6), (7, 4), (7, 6), (4, 2), (0, 1)]
+Player 1: AI d=6 alphabeta heuristic_1
+Player 2: AI d=6 alphabeta heuristic_2
+move #0
+ |ABCDEFGH
+-+--------
+0|........
+1|*.......
+2|...**...
+3|........
+4|.......*
+5|........
+6|...*...*
+7|........
+
+
+Player X plays: A 0
+i	Evaluation time: 4.500108s
+ii	Heuristic evaluations: 16024
+iii	Evaluations by depth: {6: 16024}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #1
+ |ABCDEFGH
+-+--------
+0|X.......
+1|*.......
+2|...**...
+3|........
+4|.......*
+5|........
+6|...*...*
+7|........
+
+
+Player O plays: A 3
+i	Evaluation time: 2.3035781s
+ii	Heuristic evaluations: 10456
+iii	Evaluations by depth: {6: 10456}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #2
+ |ABCDEFGH
+-+--------
+0|X.......
+1|*.......
+2|...**...
+3|O.......
+4|.......*
+5|........
+6|...*...*
+7|........
+
+
+Player X plays: A 2
+i	Evaluation time: 4.5001869s
+ii	Heuristic evaluations: 16117
+iii	Evaluations by depth: {6: 16117}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #3
+ |ABCDEFGH
+-+--------
+0|X.......
+1|*.......
+2|X..**...
+3|O.......
+4|.......*
+5|........
+6|...*...*
+7|........
+
+
+Player O plays: A 4
+i	Evaluation time: 1.2369134s
+ii	Heuristic evaluations: 5452
+iii	Evaluations by depth: {6: 5452}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #4
+ |ABCDEFGH
+-+--------
+0|X.......
+1|*.......
+2|X..**...
+3|O.......
+4|O......*
+5|........
+6|...*...*
+7|........
+
+
+Player X plays: B 0
+i	Evaluation time: 4.5004547s
+ii	Heuristic evaluations: 16251
+iii	Evaluations by depth: {6: 16251}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #5
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*.......
+2|X..**...
+3|O.......
+4|O......*
+5|........
+6|...*...*
+7|........
+
+
+Player O plays: A 5
+i	Evaluation time: 0.4468873s
+ii	Heuristic evaluations: 204
+iii	Evaluations by depth: {6: 204}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #6
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*.......
+2|X..**...
+3|O.......
+4|O......*
+5|O.......
+6|...*...*
+7|........
+
+
+Player X plays: A 6
+i	Evaluation time: 2.32656s
+ii	Heuristic evaluations: 7731
+iii	Evaluations by depth: {6: 7731}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #7
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*.......
+2|X..**...
+3|O.......
+4|O......*
+5|O.......
+6|X..*...*
+7|........
+
+
+Player O plays: A 7
+i	Evaluation time: 0.9095564s
+ii	Heuristic evaluations: 3770
+iii	Evaluations by depth: {6: 3770}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #8
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*.......
+2|X..**...
+3|O.......
+4|O......*
+5|O.......
+6|X..*...*
+7|O.......
+
+
+Player X plays: B 1
+i	Evaluation time: 0.9650695s
+ii	Heuristic evaluations: 2823
+iii	Evaluations by depth: {6: 2823}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #9
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|X..**...
+3|O.......
+4|O......*
+5|O.......
+6|X..*...*
+7|O.......
+
+
+Player O plays: B 2
+i	Evaluation time: 0.6006792s
+ii	Heuristic evaluations: 2208
+iii	Evaluations by depth: {6: 2208}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #10
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|XO.**...
+3|O.......
+4|O......*
+5|O.......
+6|X..*...*
+7|O.......
+
+
+Player X plays: B 3
+i	Evaluation time: 0.8011024s
+ii	Heuristic evaluations: 2269
+iii	Evaluations by depth: {6: 2269}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #11
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|XO.**...
+3|OX......
+4|O......*
+5|O.......
+6|X..*...*
+7|O.......
+
+
+Player O plays: B 4
+i	Evaluation time: 0.7535431s
+ii	Heuristic evaluations: 3059
+iii	Evaluations by depth: {6: 3059}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #12
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|XO.**...
+3|OX......
+4|OO.....*
+5|O.......
+6|X..*...*
+7|O.......
+
+
+Player X plays: B 5
+i	Evaluation time: 1.220839s
+ii	Heuristic evaluations: 3856
+iii	Evaluations by depth: {6: 3856}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #13
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|XO.**...
+3|OX......
+4|OO.....*
+5|OX......
+6|X..*...*
+7|O.......
+
+
+Player O plays: B 6
+i	Evaluation time: 1.178627s
+ii	Heuristic evaluations: 5413
+iii	Evaluations by depth: {6: 5413}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #14
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|XO.**...
+3|OX......
+4|OO.....*
+5|OX......
+6|XO.*...*
+7|O.......
+
+
+Player X plays: B 7
+i	Evaluation time: 0.7557123s
+ii	Heuristic evaluations: 2224
+iii	Evaluations by depth: {6: 2224}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #15
+ |ABCDEFGH
+-+--------
+0|XX......
+1|*X......
+2|XO.**...
+3|OX......
+4|OO.....*
+5|OX......
+6|XO.*...*
+7|OX......
+
+
+Player O plays: C 0
+i	Evaluation time: 0.6014771s
+ii	Heuristic evaluations: 2258
+iii	Evaluations by depth: {6: 2258}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #16
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*X......
+2|XO.**...
+3|OX......
+4|OO.....*
+5|OX......
+6|XO.*...*
+7|OX......
+
+
+Player X plays: C 1
+i	Evaluation time: 0.6284394s
+ii	Heuristic evaluations: 1787
+iii	Evaluations by depth: {6: 1787}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #17
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XO.**...
+3|OX......
+4|OO.....*
+5|OX......
+6|XO.*...*
+7|OX......
+
+
+Player O plays: C 2
+i	Evaluation time: 0.4241064s
+ii	Heuristic evaluations: 1527
+iii	Evaluations by depth: {6: 1527}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #18
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XOO**...
+3|OX......
+4|OO.....*
+5|OX......
+6|XO.*...*
+7|OX......
+
+
+Player X plays: C 3
+i	Evaluation time: 0.5536566s
+ii	Heuristic evaluations: 1547
+iii	Evaluations by depth: {6: 1547}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #19
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XOO**...
+3|OXX.....
+4|OO.....*
+5|OX......
+6|XO.*...*
+7|OX......
+
+
+Player O plays: C 4
+i	Evaluation time: 0.4618771s
+ii	Heuristic evaluations: 1824
+iii	Evaluations by depth: {6: 1824}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #20
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XOO**...
+3|OXX.....
+4|OOO....*
+5|OX......
+6|XO.*...*
+7|OX......
+
+
+Player X plays: C 5
+i	Evaluation time: 1.4260252s
+ii	Heuristic evaluations: 4797
+iii	Evaluations by depth: {6: 4797}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.993038493038493
+move #21
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XOO**...
+3|OXX.....
+4|OOO....*
+5|OXX.....
+6|XO.*...*
+7|OX......
+
+
+Player O plays: C 6
+i	Evaluation time: 0.6324954s
+ii	Heuristic evaluations: 2768
+iii	Evaluations by depth: {6: 2768}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #22
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XOO**...
+3|OXX.....
+4|OOO....*
+5|OXX.....
+6|XOO*...*
+7|OX......
+
+
+Player X plays: C 7
+i	Evaluation time: 0.782722s
+ii	Heuristic evaluations: 2482
+iii	Evaluations by depth: {6: 2482}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.98968253968254
+move #23
+ |ABCDEFGH
+-+--------
+0|XXO.....
+1|*XX.....
+2|XOO**...
+3|OXX.....
+4|OOO....*
+5|OXX.....
+6|XOO*...*
+7|OXX.....
+
+
+Player O plays: D 0
+i	Evaluation time: 0.3473132s
+ii	Heuristic evaluations: 1308
+iii	Evaluations by depth: {6: 1308}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #24
+ |ABCDEFGH
+-+--------
+0|XXOO....
+1|*XX.....
+2|XOO**...
+3|OXX.....
+4|OOO....*
+5|OXX.....
+6|XOO*...*
+7|OXX.....
+
+
+Player X plays: D 1
+i	Evaluation time: 0.4419973s
+ii	Heuristic evaluations: 1227
+iii	Evaluations by depth: {6: 1227}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.98051948051948
+move #25
+ |ABCDEFGH
+-+--------
+0|XXOO....
+1|*XXX....
+2|XOO**...
+3|OXX.....
+4|OOO....*
+5|OXX.....
+6|XOO*...*
+7|OXX.....
+
+
+Player O plays: D 3
+i	Evaluation time: 0.3035102s
+ii	Heuristic evaluations: 1054
+iii	Evaluations by depth: {6: 1054}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.99090909090909
+move #26
+ |ABCDEFGH
+-+--------
+0|XXOO....
+1|*XXX....
+2|XOO**...
+3|OXXO....
+4|OOO....*
+5|OXX.....
+6|XOO*...*
+7|OXX.....
+
+
+Player X plays: D 4
+i	Evaluation time: 0.3374622s
+ii	Heuristic evaluations: 913
+iii	Evaluations by depth: {6: 913}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #27
+ |ABCDEFGH
+-+--------
+0|XXOO....
+1|*XXX....
+2|XOO**...
+3|OXXO....
+4|OOOX...*
+5|OXX.....
+6|XOO*...*
+7|OXX.....
+
+
+Player O plays: D 5
+i	Evaluation time: 0.2640886s
+ii	Heuristic evaluations: 933
+iii	Evaluations by depth: {6: 933}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.985185185185185
+move #28
+ |ABCDEFGH
+-+--------
+0|XXOO....
+1|*XXX....
+2|XOO**...
+3|OXXO....
+4|OOOX...*
+5|OXXO....
+6|XOO*...*
+7|OXX.....
+
+
+Player X plays: D 7
+i	Evaluation time: 0.2919374s
+ii	Heuristic evaluations: 797
+iii	Evaluations by depth: {6: 797}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #29
+ |ABCDEFGH
+-+--------
+0|XXOO....
+1|*XXX....
+2|XOO**...
+3|OXXO....
+4|OOOX...*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player O plays: E 0
+i	Evaluation time: 0.2623818s
+ii	Heuristic evaluations: 910
+iii	Evaluations by depth: {6: 910}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.98619832548404
+move #30
+ |ABCDEFGH
+-+--------
+0|XXOOO...
+1|*XXX....
+2|XOO**...
+3|OXXO....
+4|OOOX...*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player X plays: E 1
+i	Evaluation time: 0.2752235s
+ii	Heuristic evaluations: 745
+iii	Evaluations by depth: {6: 745}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.978909465020576
+move #31
+ |ABCDEFGH
+-+--------
+0|XXOOO...
+1|*XXXX...
+2|XOO**...
+3|OXXO....
+4|OOOX...*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player O plays: F 1
+i	Evaluation time: 0.6399601s
+ii	Heuristic evaluations: 2431
+iii	Evaluations by depth: {6: 2431}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.780679376179377
+move #32
+ |ABCDEFGH
+-+--------
+0|XXOOO...
+1|*XXXXO..
+2|XOO**...
+3|OXXO....
+4|OOOX...*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player X plays: E 3
+i	Evaluation time: 0.3997798s
+ii	Heuristic evaluations: 1220
+iii	Evaluations by depth: {6: 1220}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.988727272727273
+move #33
+ |ABCDEFGH
+-+--------
+0|XXOOO...
+1|*XXXXO..
+2|XOO**...
+3|OXXOX...
+4|OOOX...*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player O plays: E 4
+i	Evaluation time: 0.2102616s
+ii	Heuristic evaluations: 708
+iii	Evaluations by depth: {6: 708}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.969360269360269
+move #34
+ |ABCDEFGH
+-+--------
+0|XXOOO...
+1|*XXXXO..
+2|XOO**...
+3|OXXOX...
+4|OOOXO..*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player X plays: F 0
+i	Evaluation time: 1.8632588s
+ii	Heuristic evaluations: 6440
+iii	Evaluations by depth: {6: 6440}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.960741489036327
+move #35
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXO..
+2|XOO**...
+3|OXXOX...
+4|OOOXO..*
+5|OXXO....
+6|XOO*...*
+7|OXXX....
+
+
+Player O plays: E 5
+i	Evaluation time: 0.1563027s
+ii	Heuristic evaluations: 534
+iii	Evaluations by depth: {6: 534}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.9505772005772
+move #36
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXO..
+2|XOO**...
+3|OXXOX...
+4|OOOXO..*
+5|OXXOO...
+6|XOO*...*
+7|OXXX....
+
+
+Player X plays: E 6
+i	Evaluation time: 0.3892155s
+ii	Heuristic evaluations: 1256
+iii	Evaluations by depth: {6: 1256}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.973636548636549
+move #37
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXO..
+2|XOO**...
+3|OXXOX...
+4|OOOXO..*
+5|OXXOO...
+6|XOO*X..*
+7|OXXX....
+
+
+Player O plays: E 7
+i	Evaluation time: 0.1163204s
+ii	Heuristic evaluations: 392
+iii	Evaluations by depth: {6: 392}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.992857142857143
+move #38
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXO..
+2|XOO**...
+3|OXXOX...
+4|OOOXO..*
+5|OXXOO...
+6|XOO*X..*
+7|OXXXO...
+
+
+Player X plays: F 2
+i	Evaluation time: 0.2061372s
+ii	Heuristic evaluations: 629
+iii	Evaluations by depth: {6: 629}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.945906432748538
+move #39
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXO..
+2|XOO**X..
+3|OXXOX...
+4|OOOXO..*
+5|OXXOO...
+6|XOO*X..*
+7|OXXXO...
+
+
+Player O plays: G 1
+i	Evaluation time: 0.3819597s
+ii	Heuristic evaluations: 1296
+iii	Evaluations by depth: {6: 1296}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.433333333333333
+move #40
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOX...
+4|OOOXO..*
+5|OXXOO...
+6|XOO*X..*
+7|OXXXO...
+
+
+Player X plays: F 3
+i	Evaluation time: 1.2193077s
+ii	Heuristic evaluations: 4268
+iii	Evaluations by depth: {6: 4268}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.976620370370369
+move #41
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOXX..
+4|OOOXO..*
+5|OXXOO...
+6|XOO*X..*
+7|OXXXO...
+
+
+Player O plays: F 4
+i	Evaluation time: 0.0677476s
+ii	Heuristic evaluations: 226
+iii	Evaluations by depth: {6: 226}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #42
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOXX..
+4|OOOXOO.*
+5|OXXOO...
+6|XOO*X..*
+7|OXXXO...
+
+
+Player X plays: F 5
+i	Evaluation time: 1.1826808s
+ii	Heuristic evaluations: 4286
+iii	Evaluations by depth: {6: 4286}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #43
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOXX..
+4|OOOXOO.*
+5|OXXOOX..
+6|XOO*X..*
+7|OXXXO...
+
+
+Player O plays: F 6
+i	Evaluation time: 0.0833828s
+ii	Heuristic evaluations: 276
+iii	Evaluations by depth: {6: 276}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.979220779220779
+move #44
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOXX..
+4|OOOXOO.*
+5|OXXOOX..
+6|XOO*XO.*
+7|OXXXO...
+
+
+Player X plays: F 7
+i	Evaluation time: 1.3296506s
+ii	Heuristic evaluations: 4487
+iii	Evaluations by depth: {6: 4487}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.967532467532466
+move #45
+ |ABCDEFGH
+-+--------
+0|XXOOOX..
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOXX..
+4|OOOXOO.*
+5|OXXOOX..
+6|XOO*XO.*
+7|OXXXOX..
+
+
+Player O plays: G 0
+i	Evaluation time: 0.0555539s
+ii	Heuristic evaluations: 179
+iii	Evaluations by depth: {6: 179}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.962962962962962
+move #46
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**X..
+3|OXXOXX..
+4|OOOXOO.*
+5|OXXOOX..
+6|XOO*XO.*
+7|OXXXOX..
+
+
+Player X plays: G 2
+i	Evaluation time: 0.4770088s
+ii	Heuristic evaluations: 1581
+iii	Evaluations by depth: {6: 1581}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.9375
+move #47
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XX.
+3|OXXOXX..
+4|OOOXOO.*
+5|OXXOOX..
+6|XOO*XO.*
+7|OXXXOX..
+
+
+Player O plays: G 4
+i	Evaluation time: 0.0403047s
+ii	Heuristic evaluations: 138
+iii	Evaluations by depth: {6: 138}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.955026455026454
+move #48
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XX.
+3|OXXOXX..
+4|OOOXOOO*
+5|OXXOOX..
+6|XOO*XO.*
+7|OXXXOX..
+
+
+Player X plays: G 3
+i	Evaluation time: 0.1383195s
+ii	Heuristic evaluations: 480
+iii	Evaluations by depth: {6: 480}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #49
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XX.
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOX..
+6|XOO*XO.*
+7|OXXXOX..
+
+
+Player O plays: G 5
+i	Evaluation time: 0.0163758s
+ii	Heuristic evaluations: 50
+iii	Evaluations by depth: {6: 50}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #50
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XX.
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XO.*
+7|OXXXOX..
+
+
+Player X plays: G 6
+i	Evaluation time: 0.0601146s
+ii	Heuristic evaluations: 192
+iii	Evaluations by depth: {6: 192}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #51
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XX.
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XOX*
+7|OXXXOX..
+
+
+Player O plays: H 2
+i	Evaluation time: 0.0566785s
+ii	Heuristic evaluations: 191
+iii	Evaluations by depth: {6: 191}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #52
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XXO
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XOX*
+7|OXXXOX..
+
+
+Player X plays: G 7
+i	Evaluation time: 0.0203593s
+ii	Heuristic evaluations: 48
+iii	Evaluations by depth: {6: 48}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #53
+ |ABCDEFGH
+-+--------
+0|XXOOOXO.
+1|*XXXXOO.
+2|XOO**XXO
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XOX*
+7|OXXXOXX.
+
+
+Player O plays: H 0
+i	Evaluation time: 0.0057683s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 6.0
+move #54
+ |ABCDEFGH
+-+--------
+0|XXOOOXOO
+1|*XXXXOO.
+2|XOO**XXO
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XOX*
+7|OXXXOXX.
+
+
+Player X plays: H 1
+i	Evaluation time: 0.0025659s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 5.0
+move #55
+ |ABCDEFGH
+-+--------
+0|XXOOOXOO
+1|*XXXXOOX
+2|XOO**XXO
+3|OXXOXXX.
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XOX*
+7|OXXXOXX.
+
+
+Player O plays: H 3
+i	Evaluation time: 0.0010662s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 4.0
+move #56
+ |ABCDEFGH
+-+--------
+0|XXOOOXOO
+1|*XXXXOOX
+2|XOO**XXO
+3|OXXOXXXO
+4|OOOXOOO*
+5|OXXOOXO.
+6|XOO*XOX*
+7|OXXXOXX.
+
+
+Player X plays: H 5
+i	Evaluation time: 0.0005124s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 3.0
+move #57
+ |ABCDEFGH
+-+--------
+0|XXOOOXOO
+1|*XXXXOOX
+2|XOO**XXO
+3|OXXOXXXO
+4|OOOXOOO*
+5|OXXOOXOX
+6|XOO*XOX*
+7|OXXXOXX.
+
+
+Player O plays: H 7
+i	Evaluation time: 0.0001907s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 2.0
+move #58
+ |ABCDEFGH
+-+--------
+0|XXOOOXOO
+1|*XXXXOOX
+2|XOO**XXO
+3|OXXOXXXO
+4|OOOXOOO*
+5|OXXOOXOX
+6|XOO*XOX*
+7|OXXXOXXO
+
+
+The winner is X!
+i	Average Evaluation time: 0.7612985249223381s
+ii	Total Heuristic evaluations: 156042
+iii	Evaluations by depth: {6: 156042}
+iv	Average evaluation depth: 5.482758620689655
+v	Average recursion depth: 0.034482758620689655

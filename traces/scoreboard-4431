@@ -1,0 +1,13 @@
+n=4 b=4 s=3 t=1
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+Player 1: AI d=6 alphabeta heuristic_1
+Player 2: AI d=6 alphabeta heuristic_2
+5 games
+Total wins for agent 1: 5 (0.5)
+Total wins for agent 2: 5 (0.5)
+i	Average Evaluation time: 0.04027069739575656s
+ii	Total Heuristic evaluations: 9531
+iii	Evaluations by depth: {6: 9531}
+iv	Average evaluation depth: 5.09433962264151
+v	Average recursion depth: 5.277368868756447
+vi	Average moves per game: 5.3

@@ -1,0 +1,65 @@
+n=4 b=4 s=3 t=5
+blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
+Player 1: AI d=6 minimax heuristic_1
+Player 2: AI d=6 minimax heuristic_2
+move #0
+ |ABCD
+-+----
+0|*..*
+1|....
+2|....
+3|*..*
+
+
+Player X plays: B 1
+i	Evaluation time: 4.5000238s
+ii	Heuristic evaluations: 25376
+iii	Evaluations by depth: {6: 25376}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 6.0
+move #1
+ |ABCD
+-+----
+0|*..*
+1|.X..
+2|....
+3|*..*
+
+
+Player O plays: C 2
+i	Evaluation time: 4.5000749s
+ii	Heuristic evaluations: 31907
+iii	Evaluations by depth: {6: 31907}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.9152529761904775
+move #2
+ |ABCD
+-+----
+0|*..*
+1|.X..
+2|..O.
+3|*..*
+
+
+Player X plays: A 2
+i	Evaluation time: 3.4964592s
+ii	Heuristic evaluations: 17736
+iii	Evaluations by depth: {6: 17736}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.676984126984126
+move #3
+ |ABCD
+-+----
+0|*..*
+1|.X..
+2|X.O.
+3|*..*
+
+
+agent O loses: made an illegal move.
+The winner is X!
+i	Average Evaluation time: 4.16551931699117s
+ii	Total Heuristic evaluations: 75019
+iii	Evaluations by depth: {6: 75019}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 1.8923280423280422
