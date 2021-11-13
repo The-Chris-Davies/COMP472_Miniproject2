@@ -28,15 +28,17 @@ I created the Agent class to allow more flexibility in the AI that plays against
 
 where `count(k,p)` is the number of possible s-in-a-rows that have `k` pieces in them for player `p`.
 
-Note that the weight for each of these counts (2^k) is not optimal - I know that, for example, two (s-1)-in-a-rows is equivalent to one s-in-a-row, but I didn't do a full combinatorial game theory analysis of the move combinations as I would have liked. 
+Note that the weight for each of these counts (2^2k) is not optimal - I know that, for example, two (s-1)-in-a-rows is equivalent to one s-in-a-row, but I didn't do a full combinatorial game theory analysis of the move combinations as I would have liked. 
 
 This approach fails to consider the case where multiple possible s-in-a-rows share a hole, as it assumes all are independent.
 
 ### heuristic_2:
-`heuristic_2` is similar to heuristic 1, except it ignores whether a state is valid or not, and does not weight its moves by `k` instead of 2^k. This way, it runs 2/3 of the convolutions of heuristic_1 and avoids the comparisons that determine if a state is valid. This way, it is faster than the first heuristic, but not as informed.
+`heuristic_2` is similar to heuristic 1, except it ignores whether a state is valid or not. This way, it runs 2/3 of the convolutions of heuristic_1 and avoids the comparisons that determine if a state is valid. This way, it is faster than the first heuristic, but not as informed.
 
 ## Speed:
 my system is currently very slow (due to all the array operations). That said, it is *very* parallelizable, so if the heuristic function was gpu accelerated, I believe this would be very quick. (the way the heuristic is found from the convolution involves a lot of array comparisons, which are a perfect use case for SIMD operations on the GPU). I have written my program to use CuPy if available, but because I don't have an Nvidia GPU, I am not able to test it.
+
+In the game configurations provided, my heuristics very frequently ran out of time, and often were unable to perform any meaningful analysis of the board state. That's what happens when you don't read the project definition I suppose.
 
 because of all the time I wasted on mediocre and irrelevant speed improvements, my AI is relatively unoptimised, and could do with improvement.
 I have not implemented any sorting into alpha-beta pruning, given more time this would be the first thing I do.

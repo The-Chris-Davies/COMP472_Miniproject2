@@ -2,6 +2,7 @@ n=4 b=4 s=3 t=5
 blocs=[(0, 0), (0, 3), (3, 0), (3, 3)]
 Player 1: AI d=6 minimax heuristic_1
 Player 2: AI d=6 minimax heuristic_2
+
 move #0
  |ABCD
 -+----
@@ -11,55 +12,201 @@ move #0
 3|*..*
 
 
-Player X plays: B 1
-i	Evaluation time: 4.5000238s
-ii	Heuristic evaluations: 25376
-iii	Evaluations by depth: {6: 25376}
+Player X plays: A 1
+i	Evaluation time: 4.500052s
+ii	Heuristic evaluations: 16977
+iii	Evaluations by depth: {6: 16977}
 iv	Average evaluation depth: 6.0
 v	Average recursion depth: 6.0
+
 move #1
  |ABCD
 -+----
 0|*..*
-1|.X..
+1|X...
 2|....
 3|*..*
 
 
-Player O plays: C 2
-i	Evaluation time: 4.5000749s
-ii	Heuristic evaluations: 31907
-iii	Evaluations by depth: {6: 31907}
+Player O plays: B 2
+i	Evaluation time: 4.5003035s
+ii	Heuristic evaluations: 21237
+iii	Evaluations by depth: {6: 21237}
 iv	Average evaluation depth: 6.0
-v	Average recursion depth: 5.9152529761904775
+v	Average recursion depth: 5.963809523809524
+
 move #2
  |ABCD
 -+----
 0|*..*
-1|.X..
-2|..O.
+1|X...
+2|.O..
 3|*..*
 
 
-Player X plays: A 2
-i	Evaluation time: 3.4964592s
-ii	Heuristic evaluations: 17736
-iii	Evaluations by depth: {6: 17736}
+Player X plays: B 1
+i	Evaluation time: 4.5003474s
+ii	Heuristic evaluations: 15066
+iii	Evaluations by depth: {6: 15066}
 iv	Average evaluation depth: 6.0
-v	Average recursion depth: 5.676984126984126
+v	Average recursion depth: 5.838081065759638
+
 move #3
  |ABCD
 -+----
 0|*..*
-1|.X..
-2|X.O.
+1|XX..
+2|.O..
 3|*..*
 
 
-agent O loses: made an illegal move.
-The winner is X!
-i	Average Evaluation time: 4.16551931699117s
-ii	Total Heuristic evaluations: 75019
-iii	Evaluations by depth: {6: 75019}
+Player O plays: C 1
+i	Evaluation time: 2.3552749s
+ii	Heuristic evaluations: 9096
+iii	Evaluations by depth: {6: 9096}
 iv	Average evaluation depth: 6.0
-v	Average recursion depth: 1.8923280423280422
+v	Average recursion depth: 5.441798941798941
+
+move #4
+ |ABCD
+-+----
+0|*..*
+1|XXO.
+2|.O..
+3|*..*
+
+
+Player X plays: A 2
+i	Evaluation time: 1.4325831s
+ii	Heuristic evaluations: 4836
+iii	Evaluations by depth: {6: 4836}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.757142857142855
+
+move #5
+ |ABCD
+-+----
+0|*..*
+1|XXO.
+2|XO..
+3|*..*
+
+
+Player O plays: C 0
+i	Evaluation time: 0.3249547s
+ii	Heuristic evaluations: 972
+iii	Evaluations by depth: {6: 972}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.133333333333334
+
+move #6
+ |ABCD
+-+----
+0|*.O*
+1|XXO.
+2|XO..
+3|*..*
+
+
+Player X plays: C 2
+i	Evaluation time: 0.1621795s
+ii	Heuristic evaluations: 408
+iii	Evaluations by depth: {6: 408}
+iv	Average evaluation depth: 6.0
+v	Average recursion depth: 5.266666666666668
+
+move #7
+ |ABCD
+-+----
+0|*.O*
+1|XXO.
+2|XOX.
+3|*..*
+
+
+Player O plays: B 0
+i	Evaluation time: 0.0279775s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 5.733333333333333
+
+move #8
+ |ABCD
+-+----
+0|*OO*
+1|XXO.
+2|XOX.
+3|*..*
+
+
+Player X plays: D 2
+i	Evaluation time: 0.006026s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 4.416666666666667
+
+move #9
+ |ABCD
+-+----
+0|*OO*
+1|XXO.
+2|XOXX
+3|*..*
+
+
+Player O plays: B 3
+i	Evaluation time: 0.001658s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 4.0
+
+move #10
+ |ABCD
+-+----
+0|*OO*
+1|XXO.
+2|XOXX
+3|*O.*
+
+
+Player X plays: C 3
+i	Evaluation time: 0.0005434s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 3.0
+
+move #11
+ |ABCD
+-+----
+0|*OO*
+1|XXO.
+2|XOXX
+3|*OX*
+
+
+Player O plays: D 1
+i	Evaluation time: 0.0002046s
+ii	Heuristic evaluations: 0
+iii	Evaluations by depth: {}
+iv	Average evaluation depth: 0.0
+v	Average recursion depth: 2.0
+
+move #12
+ |ABCD
+-+----
+0|*OO*
+1|XXOO
+2|XOXX
+3|*OX*
+
+
+It's a tie!
+i	Average Evaluation time: 1.4843420386314392s
+ii	Total Heuristic evaluations: 68592
+iii	Evaluations by depth: {6: 68592}
+iv	Average evaluation depth: 3.5
+v	Average recursion depth: 4.879236032375913

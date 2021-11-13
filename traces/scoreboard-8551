@@ -1,13 +1,13 @@
 n=8 b=5 s=5 t=1
-blocs=[(7, 2), (6, 7), (7, 6), (3, 3), (3, 4)]
+blocs=[(3, 7), (0, 1), (0, 0), (5, 7), (5, 4)]
 Player 1: AI d=2 alphabeta heuristic_1
 Player 2: AI d=6 alphabeta heuristic_2
 5 games
-Total wins for agent 1: 6 (0.4)
-Total wins for agent 2: 4 (0.6)
-i	Average Evaluation time: 0.3230876733671944s
-ii	Total Heuristic evaluations: 404704
-iii	Evaluations by depth: {2: 657, 6: 404047}
-iv	Average evaluation depth: 3.8867924528301887
-v	Average recursion depth: 3.900461132930679
-vi	Average moves per game: 26.5
+Total wins for agent 1: 7 (0.7777777777777778)
+Total wins for agent 2: 2 (0.2222222222222222
+i	Average Evaluation time: 0.4035819408505462s
+ii	Total Heuristic evaluations: 168798
+iii	Evaluations by depth: {6: 168694, 2: 104}
+iv	Average evaluation depth: 3.86046511627907
+v	Average recursion depth: 3.882435492589943
+vi	Average moves per game: 12.9

@@ -4,10 +4,10 @@ Player 1: AI d=6 minimax heuristic_1
 Player 2: AI d=6 minimax heuristic_2
 5 games
 Total wins for agent 1: 5 (0.5)
-Total wins for agent 2: 5 (0.5)
-i	Average Evaluation time: 2.228162864844004s
-ii	Total Heuristic evaluations: 163838
-iii	Evaluations by depth: {6: 163838}
+Total wins for agent 2: 5 (0.5
+i	Average Evaluation time: 4.500085115432739s
+ii	Total Heuristic evaluations: 50621
+iii	Evaluations by depth: {6: 50621}
 iv	Average evaluation depth: 6.0
-v	Average recursion depth: 5.045436576829806
-vi	Average moves per game: 1.2
+v	Average recursion depth: 5.948701814058957
+vi	Average moves per game: 0.3

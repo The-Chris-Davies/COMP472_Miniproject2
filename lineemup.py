@@ -55,13 +55,21 @@ class Agent:
                  game.convolve_winstates(game.current_state['X' if self.p == 'O' else 'O']),
                  game.convolve_winstates(game.current_state['B'])]
 
+        # set score to +/- inf if one player has won
+        for conv in convs[0]:
+            if game.s in conv:
+                return float('inf')
+        for conv in convs[1]:
+            if game.s in conv:
+                return float('-inf')
+    
         # combines the convolved matricies to a usable state
         # any entry in our convolution that also has an entry in the opponents, or in b, is blocked.
         for i in range(len(convs[0])):
-            for j in range(2,game.s):
+            for j in range(1,game.s):
                 # score: the number of unobstructed win conditions, weighted by 2^(length of the condition)
                 # this feels like code golf and github copilot had a child, and it's ugly
-                score += (np.count_nonzero(convs[0][i][convs[1][i]+convs[2][i] == 0] == j) - np.count_nonzero(convs[1][i][convs[0][i]+convs[2][i] == 0] == j))<<j
+                score += (np.count_nonzero(convs[0][i][convs[1][i]+convs[2][i] == 0] == j) - np.count_nonzero(convs[1][i][convs[0][i]+convs[2][i] == 0] == j))<<(j<<1)
         return score
 
     def heuristic_2(self, game):
@@ -75,12 +83,20 @@ class Agent:
         convs = [game.convolve_winstates(game.current_state[self.p]),
                  game.convolve_winstates(game.current_state['X' if self.p == 'O' else 'O'])]
 
+        # set score to +/- inf if one player has won
+        for conv in convs[0]:
+            if game.s in conv:
+                return float('inf')
+        for conv in convs[1]:
+            if game.s in conv:
+                return float('-inf')
+
         # combines the convolved matricies to a usable state
         # any entry in our convolution that also has an entry in the opponents, or in b, is blocked.
         for i in range(len(convs[0])):
-            for j in range(2,game.s):
+            for j in range(1,game.s):
                 #score: the number of unobstructed win conditions * the number of pieces in that condition (- the same for the opponent)
-                score += (np.count_nonzero(convs[0][i] == j) - np.count_nonzero(convs[1][i] == j)) * j
+                score += (np.count_nonzero(convs[0][i] == j) - np.count_nonzero(convs[1][i] == j))<<(j<<1)
         return score
 
     def human(self, game):
@@ -90,13 +106,19 @@ class Agent:
         self.heval_d = {}
         self.ard = 0
 
+        oldx,oldy=None,None
+
         while True:
             move = input(F'Player {game.player_turn}, enter your move:').split()
             px = ord(move[0].lower()) - ord('a')
             py = int(move[1])
-
             if game.is_valid(px, py):
-                return (px,py)
+                game.current_state[self.p][px][py] = 1
+                print(self.heuristic(game))
+                game.undo_move(px,py)
+                if(px == oldx and py == oldy):
+                    return (px,py)
+                oldx,oldy = px,py
             else:
                 print('The move is not valid! Try again.')
 
@@ -220,7 +242,7 @@ class Agent:
             for j in range(0, game.n):
                 if game.is_valid(i,j):
 
-                    # if time is out, return the current pos
+                    # if time is out, return the current pos if no others have been found
                     if time.time() > endt:
                         if(x == None):
                             value=self.heuristic(game)
@@ -404,19 +426,6 @@ class Game:
         self.current_state['X'][x,y] = 0
         self.current_state['O'][x,y] = 0
 
-    def check_end(self):
-        self.result = self.is_end()
-        # Printing the appropriate message if the game has ended
-        if self.result != None:
-            if self.result == 'X':
-                print('The winner is X!')
-            elif self.result == 'O':
-                print('The winner is O!')
-            elif self.result == '.':
-                print("It's a tie!")
-            self.initialize_game()
-        return self.result
-
     def switch_player(self):
         if self.player_turn == 'X':
             self.player_turn = 'O'
@@ -452,15 +461,19 @@ class Game:
         #setup cumulative stats
         gameInfo = {'hevals':0, 'heval_d':{}, 'd_avg':0, 'r_d':0, 'moves':0, 't_eval':0}
 
+        winner = '.'
+
         while True:
             board = self.draw_board()
-            trace.append(F"move #{gameInfo['moves']}")
+            trace.append(F"\nmove #{gameInfo['moves']}")
             if screenOut: print(trace[-1])
 
             trace.append(board)
             if screenOut: print(trace[-1])
 
-            if self.check_end():
+            if self.is_end():
+                winner = self.is_end()
+                self.initialize_game()
                 break
 
             start = time.time()
@@ -470,7 +483,7 @@ class Game:
             if(not self.make_move(*move, self.player_turn)):
                 trace.append(F"agent {self.player_turn} loses: made an illegal move.")
                 if screenOut: print(trace[-1])
-                self.switch_player()
+                winner = 'X' if self.player_turn == 'O' else 'O'
                 break
             end = time.time()
 
@@ -504,29 +517,29 @@ class Game:
             if(end-start > self.t and not agents[self.player_turn].move == agents[self.player_turn].human):
                 trace.append(F"agent {self.player_turn} loses: took too long")
                 if(screenOut): print(trace[-1])
-                self.switch_player()
+                winner = 'X' if self.player_turn == 'O' else 'O'
                 break
 
             self.switch_player()
-
-        trace.append(F'The winner is {self.player_turn}!')
+        trace.append("It's a tie!" if winner == '.' else F'The winner is {winner}!' )
+        if(screenOut): print(trace[-1])
 
         #game is over: write cumulative stats
-        trace.append(F"i\tAverage Evaluation time: {gameInfo['t_eval']/gameInfo['moves']}s")
+        trace.append(F"i\tAverage Evaluation time: {gameInfo['t_eval']/max(gameInfo['moves'],1)}s")
         if(screenOut): print(trace[-1])
         trace.append(F"ii\tTotal Heuristic evaluations: {gameInfo['hevals']}")
         if(screenOut): print(trace[-1])
         trace.append(F"iii\tEvaluations by depth: {gameInfo['heval_d']}")
         if(screenOut): print(trace[-1])
-        trace.append(F"iv\tAverage evaluation depth: {gameInfo['d_avg']/gameInfo['moves']}")
+        trace.append(F"iv\tAverage evaluation depth: {gameInfo['d_avg']/max(gameInfo['moves'],1)}")
         if(screenOut): print(trace[-1])
-        trace.append(F"v\tAverage recursion depth: {moveInfo['r_d']/gameInfo['moves']}")
+        trace.append(F"v\tAverage recursion depth: {gameInfo['r_d']/max(gameInfo['moves'],1)}")
         if(screenOut): print(trace[-1])
 
         # write trace if required
         if(log): self.save_log(trace)
 
-        return gameInfo, self.player_turn   #return game statistics and winner
+        return gameInfo, winner   #return game statistics and winner
 
 
     def play_many(self, n, agent_x=Agent(Agent.human, 'X'),agent_o=Agent(Agent.human, 'O'), screenOut=False, scoreboard=True):
@@ -549,7 +562,7 @@ class Game:
         # play the games
         for i in range(n*2):
 
-            # if i == n, swap the agents and the
+            # if i == n, swap the agents and the win count
             if (i == n):
                 agent_x, agent_o = agent_o, agent_x
                 cumInfo['wins']['X'], cumInfo['wins']['O'] = cumInfo['wins']['O'], cumInfo['wins']['X']
@@ -567,14 +580,14 @@ class Game:
             cumInfo['wins'][winner] += 1
 
         # add cumulative statistics to scoreboard
-        scoreboard.append(F"Total wins for agent 1: {cumInfo['wins']['O']} ({cumInfo['wins']['X']/(cumInfo['wins']['X']+cumInfo['wins']['O'])})")
-        scoreboard.append(F"Total wins for agent 2: {cumInfo['wins']['X']} ({cumInfo['wins']['O']/(cumInfo['wins']['X']+cumInfo['wins']['O'])})")
+        scoreboard.append(F"Total wins for agent 1: {cumInfo['wins']['O']} ({cumInfo['wins']['O']/max(cumInfo['wins']['X']+cumInfo['wins']['O'], 1)})")
+        scoreboard.append(F"Total wins for agent 2: {cumInfo['wins']['X']} ({cumInfo['wins']['X']/max(cumInfo['wins']['X']+cumInfo['wins']['O'], 1)}")
 
-        scoreboard.append(F"i\tAverage Evaluation time: {cumInfo['t_eval']/cumInfo['moves']}s")
+        scoreboard.append(F"i\tAverage Evaluation time: {cumInfo['t_eval']/max(cumInfo['moves'], 1)}s")
         scoreboard.append(F"ii\tTotal Heuristic evaluations: {cumInfo['hevals']}")
         scoreboard.append(F"iii\tEvaluations by depth: {cumInfo['heval_d']}")
-        scoreboard.append(F"iv\tAverage evaluation depth: {cumInfo['d_avg']/cumInfo['moves']}")
-        scoreboard.append(F"v\tAverage recursion depth: {cumInfo['r_d']/cumInfo['moves']}")
+        scoreboard.append(F"iv\tAverage evaluation depth: {cumInfo['d_avg']/max(cumInfo['moves'], 1)}")
+        scoreboard.append(F"v\tAverage recursion depth: {cumInfo['r_d']/max(cumInfo['moves'], 1)}")
         scoreboard.append(F"vi\tAverage moves per game: {cumInfo['moves']/(2*n)}")
 
         self.save_scoreboard(scoreboard)
@@ -607,7 +620,7 @@ def run_experiments():
         agent_x.move = agent_x.alphabeta if config['a1'] else agent_x.minimax
         agent_o.move = agent_o.alphabeta if config['a2'] else agent_o.minimax
 
-        g.play(agent_x, agent_o, log=True, screenOut=False)
+        g.play(agent_x, agent_o, log=True, screenOut=True)
         g.play_many(5, agent_x, agent_o)
 
 
